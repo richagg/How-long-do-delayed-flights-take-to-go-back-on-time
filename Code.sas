@@ -1,18 +1,3 @@
-/* loading dataset (same code as Final Ex) */
-
-dm 'Clear Log';
-
-
-%let UID= 670917320 ;
-%let libpath=E:\sas hw ;
-%let pdfpath=E:\sas hw ;
-
-libname HW3 "&libpath." ;
-ods pdf file="&pdfpath.\HW3-&UID..pdf" ;
-
-title "&SYSUSERID. - &UID. - Final Exericse" ;
-
-
 
 /***************************************************************************************/
 /***************************************************************************************/
@@ -158,7 +143,7 @@ if Div5WheelsOff="2400" then do ;
 /***************************************************************************************/
 
 data BTS201505 &droprenamemv. ;
-infile "E:\sas hw\On_Time_On_Time_Performance_2015_5(1).csv"
+infile "File1.csv"
 dsd delimiter=',' firstobs=2 obs=max ;
 
 	&lengthmv. ;
